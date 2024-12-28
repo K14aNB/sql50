@@ -1,0 +1,25 @@
+[sqlfluff]
+dialect = tsql
+templater = raw
+exclude_rules = ambiguous.column_count, structure.column_order, capitalisation.identifiers, aliasing.length
+max_line_length = 88
+processes = -1
+
+[sqlfluff:indentation]
+allow_implicit_indents = True
+
+[sqlfluff:rules:aliasing.length]
+min_alias_length = 3
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper
+
+[sqlfluff:rules:capitalisation.functions]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.types]
+capitalisation_policy = upper
+
+[sqlfluff:rules:layout.long_lines]
+ignore_comment_clauses = True
+ignore_comment_lines = True
