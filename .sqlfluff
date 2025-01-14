@@ -1,7 +1,13 @@
 [sqlfluff]
 dialect = tsql
 templater = raw
-exclude_rules = ambiguous.column_count, structure.column_order, capitalisation.identifiers, aliasing.length
+exclude_rules = ambiguous.column_count,
+                structure.column_order,
+                capitalisation.identifiers,
+                aliasing.length,
+                references.keywords,
+                references.qualification,
+                structure.constant_expression
 max_line_length = 88
 processes = -1
 
