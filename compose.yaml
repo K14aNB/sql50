@@ -1,6 +1,6 @@
 services:
   mssql:
-    container_name: sql50
+    container_name: ${CONTAINER_NAME}
     image: mcr.microsoft.com/mssql/server:2022-latest
     ports:
       - 1433:1433
